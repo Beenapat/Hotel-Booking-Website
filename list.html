@@ -30,19 +30,31 @@ width:40%;
 
 }
 
+.container2:hover
+{
+background-color:rosybrown;
+}
+
+.view:hover
+{
+background-color:blue;
+}
+
 </style>
 
 <body>
  <div style="background-color:rosybrown; positin:fixed;"><img src="assests\images\logo.png" alt="logo" width="60" height="60">
   <div style= "text-align: right;">
-  <a href="login.html" style="text-decoration: none;">Login</a></div>
+   <button  style = "background-color:white;" onclick="window.location.href='login.html';">
+ Login
+    </button></div>
   
   </div>
   
   
   <div>
   
-  <div style= "text-align: center;">
+  <div style= "text-align: center;" class = "view">
   
   <a href="list.html" style="text-decoration: none; color:black;"><b>List view</b></a>
   
@@ -91,7 +103,7 @@ width:40%;
    <p>Map View</p>
   
   </div>
-<div  style="text-align: center;><a href="index.html" style="text-decoration: none; color:black;" target="_blank">View more>></a></div>
+<div  style="text-align: center;"><button style = "background-color:grey;" onclick="window.location.href='index.html';">view more</button></div>
 <div style="background-color:rosybrown;">
 	<div style="text-align: left; background-color:rosybrown;" ><a href="contact.html" style="text-decoration: none;color:black;margin: 0 2%;">Contact Us</a></div>
 	<div style="text-align: right;">
