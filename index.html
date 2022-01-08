@@ -1,107 +1,49 @@
+<!DOCTYPE html>
 <html>
 
-<style>
-body{
-background-color:#e0e0e0;
-font-family: Ubuntu, sans-serif;
+<head>
+    <title>Index</title>
 
-}
-
-.container{
-width:150px;
-height:150px;
- border-radius: 25%;
-padding:4%;
-box-shadow: 10px 10px 10px grey;
-
-}
-
-.container4:hover
-{
-opacity: 9;
-}
-
-.social{
-width:22px;
-height:20px;
-}
-.container2
-{
-background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg');
-height:380px;
-background-position: center;
- overflow-x: hidden;
- overflow-y: auto;
- text-align:justify;
- margin: 0 auto;
-
-}
-
-
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-}
-
-
-</style>
+    <!-- Import CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
 
 <body>
-  <div style="background-color:rosybrown; positin:fixed;"><img src="assests\images\logo.png" alt="logo" width="60" height="60">
-  <div style= "text-align: right;">
-   <button  style = "background-color:white;" onclick="window.location.href='login.html';">
- Login
-    </button></div>
-  
-  </div>
+    <div class="main-container">
+        <!-- Added the header elements: Logo and Login Button -->
+        <header class="header-footer" id="header"></header>
 
- 
-  <div class ="container2"> 
-  <div style="border: 1px solid rgba(0, 0, 0, .4);background-color: #f1f1f1;width:100%;margin: 0 auto;"><input type ="text"  placeholder="city">
-  </div>
-  </div>
-  <div class="container4">
- <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"   class = "container"></a>
+        <!-- Added the main body content: city search bar div and city lists -->
+        <div id="index-container">
+            <div id="banner">
+                <div id="search-bar">
+                    <!-- Added form element for search bar to take input-->
+                    <!--Make sure the form has the autocomplete function switched off:-->
+                    <form autocomplete="off">
+                        <input id="search-input" type="text" placeholder="City" />
+                    </form>
+                </div>
+            </div>
 
+            <div id="city-cards"></div>
+            <div id="view-more-city-cards"></div>
 
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg"   class = "container">
-  
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg"  class = "container">
- 
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"   class = "container">
+            <a id="view-more">
+                <button type="button" id="view-more-btn" class="btn btn-secondary" onclick="viewMoreCities()">View More</button>
+            </a>
+        </div>
 
-  
-  </div>
-	 
-	   <div class="container4">
-<img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"   class = "container">
-
-
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg"   class = "container">
-  
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"  class = "container">
- 
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"   class = "container">
-
-  
-  </div>
-	 
-	<div  style="text-align: center;"><button style = "background-color:grey;" onclick="window.location.href='index.html';">view more</button></div>
-	<div style="background-color:rosybrown;">
-	<div style="text-align: left; background-color:rosybrown;margin: 0 2%;" ><a href="contact.html" style="text-decoration: none;color:black;">Contact Us</a></div>
-	<div style="text-align: right;">
-	<a href="https://www.facebook.com"target="_blank"><img src="assests/images/facebook.png" class="social"></a>
-	<a href="https://www.instagram.com"target="_blank"><img src="assests/images/instagram.png"  class="social"></a>
-	<a href="https://twitter.com"target="_blank"><img src="assests/images/twitter.png" class="social"></a>
-	</div>
-	<p style="text-align: center; font-size:10px;">c 2020 ROOM SEARCH PVT.LTD.</p>
-	</div>
+        <!-- Added the footer elements: Contact Us Button, Social Media Links -->
+        <footer class="header-footer" id="footer"></footer>
+        
+        <script src="scripts/index.js"></script>
+        <script src="scripts/common.js"></script>
+    </div>
 </body>
 
 </html>
